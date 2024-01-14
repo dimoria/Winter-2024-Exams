@@ -1,16 +1,18 @@
 'use strict'
 
-count = (obj) => {
-  sum = 0;
+ const counting = (object) => {
+  let summary = 0;
 
-  keys = Object.keys(obj);
+ const keys = Object.keys(object);
+
   keys.forEach((key) => {
-    [];
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+    const value = object[key];
+    if (typeof value === 'number') {
+      summary+= value;
+    }
   });
 
-  return sum;
+  return summary;
 };
 
-module.exports = count;
+module.exports = counting;
