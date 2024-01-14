@@ -1,20 +1,19 @@
 'use strict'
  const getValueBetween = (str, prefix, suffix) => {
   const prefixIndex = str.indexOf(prefix);
-  if (prefixIndex === -1) return '';
-  else {
+  if (prefixIndex === -1){
+      return '';
+  }
     let substring = str.substring(prefixIndex + prefix.length);
-    str = str.substring(substring);
     if (suffix) {
-      const suffixIndex = str.indexOf(suffix);
+      const suffixIndex = substring.indexOf(suffix);
       if (suffixIndex === -1) {
         return '';
-      } else {
-        str = str.substring(0, suffixIndex);
-      }
     }
+
+      substring=substring.substring(0, suffixIndex)
   }
-  return str;
+  return substring;
 };
 
 module.exports = getValueBetween;
