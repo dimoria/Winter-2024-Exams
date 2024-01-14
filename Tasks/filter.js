@@ -1,15 +1,15 @@
 'use strict'
 
-const filter = (T, t) => {
-   const remove = [];
-  for ( let C of T) {
-    let x = T.indexOf(C);
-    if (typeof T[x] !== t) {
-      remove.unshift(x);
+const filter = (array, row) => {
+   const arrayWithRemovedElements = [];
+  for ( let elements of array) {
+    let currentIndex = array.indexOf(elements);
+    if (typeof array[currentIndex] !== row) {
+      arrayWithRemovedElements.unshift(currentIndex);
     }
   }
-  for (let x of remove) T.splice(x, 1);
-  return T;
+  for (let removedElements of arrayWithRemovedElements) array.splice(removedElements, 1);
+  return array;
 };
 
 module.exports = filter;
