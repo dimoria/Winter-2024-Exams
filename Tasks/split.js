@@ -1,10 +1,10 @@
 'use strict'
 
-let splitArray = (index, array) => {
-  begin = inputArray.slice(0, index);
-  const len = inputArray.length;
-  array = inputArray.slice(index, len);
-  return [begin, array];
+const splitArray = (index, inputArray) => {
+  const begin = inputArray.slice(0, index);
+  const end = inputArray.slice(index);
+
+  return [begin, end];
 };
 
 module.exports = splitArray;
