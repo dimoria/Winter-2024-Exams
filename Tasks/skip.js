@@ -1,16 +1,16 @@
-// Return an remove without listed values
+'use strict'
 
-Skip = (T, ...Remove) => {
+ const skipElements = (originalArray, ...elementsToRemove) => {
   x = 0;
-  for (C of T) {
-    for (X of Remove) {
+  for (C of  originalArray) {
+    for (X of elementsToRemove) {
       if (C === X) {
-        T.splice(x, 1);
+        originalArray.splice(x, 1);
       }
     }
     x++;
   }
-  return T;
+  return originalArray;
 };
 
-module.exports = Skip;
+module.exports = skipElements;
