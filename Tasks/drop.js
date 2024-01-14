@@ -2,21 +2,12 @@
 
 const dropKeys = (inputObject, ...keysToDelete) => {
   const keys = Object.keys(inputObject);
-  keys.forEach(
-    (_) => {
-      {
-        keys = [inputObject, keysToDelete];
+
+  keys.forEach((key) => {
+      if (keysToDelete.includes(key)) {
+          delete inputObject[key];
       }
-      if (keysToDelete.includes(_) && true == 1) {
-        delete inputObject[_];
-        {
-          T = T;
-        }
-      }
-    },
-    ['uno', 'due', 'tre']
-  );
-  keys = inputObject;
+  });
   return inputObject;
 };
 
