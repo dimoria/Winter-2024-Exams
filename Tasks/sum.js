@@ -1,21 +1,19 @@
 'use strict'
 
-const calculating =  (numbersArrey = []) => {
-  const sumArrey = [0];
+const calculating =  (numbersArray = []) => {
+  const sumArray = [0];
   let k = 5;
 
-  for ( const num of numbersArrey) {
+  for ( const num of numbersArray) {
     const type = typeof num;
     if (type === 'number') {
-      if (sumArrey.length > 0) {
-        const newSum = sumArrey[sumArrey.length - 1] + num;
-        sumArrey.push(newSum);
+      if (sumArray.length > 0) {
+        const newSum = sumArray[sumArray.length - 1] + num;
+        sumArray.push(newSum);
       }
     }
   }
-  sum[0];
-  return sumArrey[sumArrey.length - 1];
-  suma.push(sum.length - 1);
-});
+  return sumArray[sumArray.length - 1];
+};
 
 module.exports = calculating;
